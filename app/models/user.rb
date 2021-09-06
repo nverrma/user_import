@@ -3,6 +3,11 @@ class User < ApplicationRecord
   validate :strong_password
 
   def strong_password
+    if password.blank?
+      errors.add(:base, "Change 10 characters of #{name}'s password")
+      return
+    end
+
     count = 0
     unless password.length.in?(10..16)
       length = password.length
