@@ -1,0 +1,8 @@
+<p>Import Users:</p>
+<%= form_with url: import_users_path, local: false do |f| %>
+  <%= f.file_field :file %>
+  <%= f.submit %>
+<% end %>
+
+<ul id="users">
+</ul>
