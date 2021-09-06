@@ -1,24 +1,37 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a sample application for importing Users by uploading a CSV file.
+Each user must have a name and a strong password.
+We show either success or an error message in response to each row in the CSV.
 
-Things you may want to cover:
+### Requirements
+* Ruby version -  ruby-2.7.1
+* Rails version - 6.1.4.1
+* Database - PostgreSQL
 
-* Ruby version
+Steps to run the application -
+1) Clone the repo
+   `git clone https://github.com/nverrma/user_import.git`
 
-* System dependencies
 
-* Configuration
+2) Move into the directory
 
-* Database creation
+   `cd import_users`
 
-* Database initialization
+3) Run bundle
 
-* How to run the test suite
+   `bundle install`
 
-* Services (job queues, cache servers, search engines, etc.)
+4) Set up database
 
-* Deployment instructions
+   `rails db:create && rails db:migrate`
 
-* ...
+5) Run the server
+
+   `rails s`
+
+6) Check functionality
+
+   Open the browser and go to `http://localhost:3000`
+
+   Upload a CSV file ([sample file](spec/fixtures/files/import_users.csv))
