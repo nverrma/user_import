@@ -19,6 +19,6 @@ RSpec.describe User, type: :model do
   it 'is not valid without a strong password' do
     subject.password = 'abcdABCD111'
     expect(subject).to_not be_valid
-    expect(subject.errors.full_messages.join(', ')).to eq "Change 1 characters of #{subject.name}'s password"
+    expect(subject.errors.full_messages.join(', ')).to eq "Change 1 character of #{subject.name}'s password"
   end
 end
